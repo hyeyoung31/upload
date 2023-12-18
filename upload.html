@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github사용법</title>
+    <style>
+    body{line-height:1.618em;}
+    h1{text-align: center;}
+    ol>li {padding:5px; font-weight:bold;}
+    ul li{list-style: none; font-weight:normal;}
+    li span {background:#ebebeb; padding:3px 5px; margin:5px 3px; display:inline-block;}
+    </style>
 </head>
 <body>
-    <p>
+    <h1>Github 업로드 방법</h1>
+    <ol>
+        <li>Git 설치하기:https://git-scm.com/</li>
+        <li>설치 완료 후 Git bash 열기</li>
+        <li>git bash 에서 환경설정 하기
+            <ul>
+                <li>step 1:유저이름(원하는 이름) 설정<br>
+                    <span>git config --global user.name "your_name"</span>
+                </li>
+                <li>step 2:유저 이메일(깃허브 가입시 메일) 설정하기<br>
+                    <span>git config --global user.email "your_email"</span>
+                </li>
+                <li>step 3:정보 확인하기<br>
+                    <span>git config --list</span>
+                </li>
+            </ul>
+        </li>
+        <li>Github에 처음 코드 업로드하기
+            <ul>
+                <li>step 1:초기화<br>
+                    <span>git init</span>
+                </li>
+                <li>step 2:추가할 파일 더하기<br>
+                    <span>git add .</span>
+                </li>
+                <li>상태 확인 (선택사항)<br>
+                    <span>git status</span>
+                </li>
+                <li>히스토리 만들기<br>
+                    <span>git commit -m "first commit"</span>
+                </li>
+                <li>Github repository랑 내 로컬프로젝트랑 연결<br>
+                    <span>git remote add origin https://github.com/hyeyoung31/upload.git</span>
+                </li>
+                <li>잘 연결되었는지 확인(선택사항)<br>
+                    <span>git remote -v</span>
+                </li>
+                <li>Github로 올리기<br>
+                    <span>git push origin master</span>
+                    <p>
+                        master 자리에는 branch이름이 들어가면 됨.<br>
+                        branch이름이 main라하면 git push origin main 이라고 써야함
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <li>Github에 계속 업로드하기
+            <ul>
+                <li>step 1:추가할 파일 더하기<br>
+                    <span>git add .</span>
+                </li>
+                <li>step 2:히스토리 만들기<br>
+                    <span>git commit -m "first commit"</span>
+                </li>
+                <li>Github로 올리기<br>
+                    <span>git push origin master</span>
+                    <p>내 컴퓨터에 소스코드를 업데이트를 하고 싶으면 이 세개의 스텝만 계속 반복하면 됨.
+                    </p>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <!-- <p>
         git init :해당 폴더에 깃
     
         git config --global user.name
@@ -24,6 +93,7 @@
         [배포 - 깃허브 폴더에 업로드 확인하고]
         settings => pages => branch(master)=>save
         시간이 좀 걸림 => 웹페이지 주소
-    </p>
+    </p> -->
+    <pre>설명출처:https://hackmd.io/@oW_dDxdsRoSpl0M64Tfg2g/ByfwpNJ-K</pre>
 </body>
 </html>
